@@ -15,6 +15,14 @@ See the License file.
 并以 Liam Huang 的名义发布。
 
 `sduthesis` 遵循不低于 1.3 版本的 LPPL 许可证，详情请查看 LICENSE 文件。
+ADD 
+
+2019年03月28日， Xianyu Wang 对本文件进行了修改，使得其格式符合山东大学（威海）本科生毕业论文要求。
+本次修改非商业行为。
+
+
+Email: xiangyuwang7@gmail.com
+
 
 ## Installation / 安装
 
