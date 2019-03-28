@@ -1,9 +1,9 @@
 
-# 山东大学（威海）毕业论文LaTeX 模版
+# 山东大学（威海）本科生毕业论文LaTeX 模版
 
 
 `sduthesis` 是由 [Liam Huang][liam-ctan] 为山东大学学生设计的 LaTeX 论文模板。
-1.x 以化名 Ch'en Meng 的名义发布；1.2.0 版本开始，以 `docstrip` 工具重写了整个代码，并以 Liam Huang 的名义发布。  
+1.x 以化名 Chen Meng 的名义发布；1.2.0 版本开始，以 `docstrip` 工具重写了整个代码，并以 Liam Huang 的名义发布。  
 
 2019年03月28日， Xianyu Wang 对本文件进行了修改，使得其格式符合山东大学（威海）本科生毕业论文要求。  
 
@@ -31,7 +31,7 @@ Liam Huang原版山东大学硕博毕业论文LaTeX模版： http://www.latexstu
 1. 删除了声明部分
 2. 改latex为xelatex以添加所需字体
 3. 更改book类默认情况下章节在奇数页开始
-4. 添加公式实例
+4. 添加公式示例
 5. 添加引用示例
 6. 对封面做出相应修改
 7. 添加.bat文件可以删除编译产生的临时文件
