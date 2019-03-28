@@ -1,12 +1,13 @@
 
-# 山东大学（威海）毕业论文$\LaTeX$ 模版
+# 山东大学（威海）毕业论文LaTeX 模版
 
 
 `sduthesis` 是由 [Liam Huang][liam-ctan] 为山东大学学生设计的 LaTeX 论文模板。
-1.x 以化名 Ch'en Meng 的名义发布；1.2.0 版本开始，以 `docstrip` 工具重写了整个代码，
-并以 Liam Huang 的名义发布。
-2019年03月28日， Xianyu Wang 对本文件进行了修改，使得其格式符合山东大学（威海）本科生毕业论文要求。
-本次修改非商业行为。
+1.x 以化名 Ch'en Meng 的名义发布；1.2.0 版本开始，以 `docstrip` 工具重写了整个代码，并以 Liam Huang 的名义发布。  
+
+2019年03月28日， Xianyu Wang 对本文件进行了修改，使得其格式符合山东大学（威海）本科生毕业论文要求。  
+
+本次修改非商业行为。  
 
 ## Introduction / 介绍
 
@@ -22,11 +23,11 @@ See the License file.
 
 
 
-Liam Huang原版山东大学硕博毕业论文： http://www.latexstudio.net/archives/3071.html
+Liam Huang原版山东大学硕博毕业论文LaTeX模版： http://www.latexstudio.net/archives/3071.html
 
 
 
-本人所做修改：
+### 所做修改：
 1. 删除了声明部分
 2. 改latex为xelatex以添加所需字体
 3. 更改book类默认情况下章节在奇数页开始
@@ -34,7 +35,9 @@ Liam Huang原版山东大学硕博毕业论文： http://www.latexstudio.net/arc
 5. 添加引用示例
 6. 对封面做出相应修改
 7. 添加.bat文件可以删除编译产生的临时文件
-一些报错解决方案：
+
+
+### 一些报错解决方案：
 1. WinEdt读取该文件显示 error reading， 解决方案参考：https://blog.csdn.net/garfielder007/article/details/51619821
 2. 缺少某个字体 如何安装字体：https://zhidao.baidu.com/question/39166963.html
    字体下载网址： http://www.3673.com/font/2168.html  可能缺少 华文新魏 Times New Roman ++
