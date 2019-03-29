@@ -46,8 +46,12 @@ Liam Huang原版山东大学硕博毕业论文LaTeX模版： http://www.latexstu
    字体下载网址： http://www.3673.com/font/2168.html  
    
    用到的额外字体：华文新魏（STXinwei）、西文字体Times New Roman、方正粗宋（FZCuSong-B09S）、方正大黑（FZDaHei-B02S），在文件夹fonts_installation中都有，拷贝到C:\Windows\Fonts
+   
    2.脚本安装
+
+
    在文件夹fonts_installation运行bat文件即可。
+
    安装完成后，在命令提示行（至于如何打开它请百度），使用fc-cache刷新下字体缓存。
 
 
