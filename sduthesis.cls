@@ -60,54 +60,32 @@
 \RequirePackage{makecell}
 %% add more xelatex fonts
 \RequirePackage{xeCJK}  %%中文字体
-\setCJKfamilyfont{song}{SimSun}                             %宋体 song
-\newcommand{\song}{\CJKfamily{song}}                        % 宋体   (Windows自带simsun.ttf)
-\setCJKfamilyfont{xs}{NSimSun}                              %新宋体 xs
+\setCJKfamilyfont{song}{SimSun}                                   %宋体 song
+\newcommand{\song}{\CJKfamily{song}}                         
+\setCJKfamilyfont{xs}{NSimSun}                                    %新宋体 xs
 \newcommand{\xs}{\CJKfamily{xs}}
-\setCJKfamilyfont{fs}{FangSong}                      %仿宋 fs
-\newcommand{\fs}{\CJKfamily{fs}}                            %仿宋体 (Windows自带simfs.ttf)
-\setCJKfamilyfont{kai}{KaiTi}                        %楷体2312  kai
+\setCJKfamilyfont{fs}{FangSong}                                   %仿宋 fs
+\newcommand{\fs}{\CJKfamily{fs}}                                 
+\setCJKfamilyfont{kai}{KaiTi}                                     %楷体2312  kai
 \newcommand{\kai}{\CJKfamily{kai}}
-\setCJKfamilyfont{yh}{Microsoft YaHei}                    %微软雅黑 yh
+\setCJKfamilyfont{yh}{Microsoft YaHei}                            %微软雅黑 yh
 \newcommand{\yh}{\CJKfamily{yh}}
-\setCJKfamilyfont{hei}{SimHei}                                    %黑体  hei
-\newcommand{\hei}{\CJKfamily{hei}}                          % 黑体   (Windows自带simhei.ttf)
-\setCJKfamilyfont{msunicode}{Arial Unicode MS}            %Arial Unicode MS: msunicode
-\newcommand{\msunicode}{\CJKfamily{msunicode}}
-\setCJKfamilyfont{li}{LiSu}                                            %隶书  li
-\newcommand{\li}{\CJKfamily{li}}
-\setCJKfamilyfont{yy}{YouYuan}                             %幼圆  yy
-\newcommand{\yy}{\CJKfamily{yy}}
-\setCJKfamilyfont{xm}{MingLiU}                                        %细明体  xm
-\newcommand{\xm}{\CJKfamily{xm}}
-\setCJKfamilyfont{xxm}{PMingLiU}                             %新细明体  xxm
-\newcommand{\xxm}{\CJKfamily{xxm}}
-\setCJKfamilyfont{hwsong}{STSong}                            %华文宋体  hwsong
-\newcommand{\hwsong}{\CJKfamily{hwsong}}
-\setCJKfamilyfont{hwzs}{STZhongsong}                        %华文中宋  hwzs
-\newcommand{\hwzs}{\CJKfamily{hwzs}}
-\setCJKfamilyfont{hwfs}{STFangsong}                            %华文仿宋  hwfs
-\newcommand{\hwfs}{\CJKfamily{hwfs}}
-\setCJKfamilyfont{hwxh}{STXihei}                                %华文细黑  hwxh
-\newcommand{\hwxh}{\CJKfamily{hwxh}}
-\setCJKfamilyfont{hwl}{STLiti}                                        %华文隶书  hwl
-\newcommand{\hwl}{\CJKfamily{hwl}}
-\setCJKfamilyfont{hwxw}{STXinwei}                                %华文新魏  hwxw
-\newcommand{\hwxw}{\CJKfamily{hwxw}}
-\setCJKfamilyfont{hwk}{STKaiti}                                    %华文楷体  hwk
-\newcommand{\hwk}{\CJKfamily{hwk}}
-\setCJKfamilyfont{hwxk}{STXingkai}                            %华文行楷  hwxk
-\newcommand{\hwxk}{\CJKfamily{hwxk}}
-\setCJKfamilyfont{hwcy}{STCaiyun}                                 %华文彩云 hwcy
-\newcommand{\hwcy}{\CJKfamily{hwcy}}
-\setCJKfamilyfont{hwhp}{STHupo}                                 %华文琥珀   hwhp
-\newcommand{\hwhp}{\CJKfamily{hwhp}}
-\setCJKfamilyfont{fzsong}{Simsun (Founder Extended)}     %方正宋体超大字符集   fzsong
-\newcommand{\fzsong}{\CJKfamily{fzsong}}
-\setCJKfamilyfont{fzyao}{FZYaoTi}                                    %方正姚体  fzy
-\newcommand{\fzyao}{\CJKfamily{fzyao}}
-\setCJKfamilyfont{fzshu}{FZShuTi}                                    %方正舒体 fzshu
-\newcommand{\fzshu}{\CJKfamily{fzshu}}
+\setCJKfamilyfont{fzdahei}{FZDaHei-B02S}                           %黑体  hei
+\newcommand{\fzdahei}{\CJKfamily{fzdahei}}                          
+\setCJKfamilyfont{li}{LiSu}                                       %隶书  li
+\newcommand{\li}{\CJKfamily{li}}                                  
+\setCJKfamilyfont{hwxw}{STXinwei}                                 %华文新魏  hwxw
+\newcommand{\hwxw}{\CJKfamily{hwxw}}                                  
+\setCJKfamilyfont{fzchs}{FZCuSong-B09S}                            %方正粗宋	
+\newcommand{\fzchs}{\CJKfamily{fzchs}}
+%%                                       设置西文字体为 Times New Roman
+\RequirePackage{fontspec}
+\setmainfont{Times New Roman}
+%%\RequirePackage{mathspec}
+%%\setallmathfont{Times New Roman}  %% 不知道为什么与上面的全局西文字体的设置发生了冲突
+
+  
+  
   
 %% add more fonts size
 \newcommand{\ershibahao}{\fontsize{28pt}{28pt}\selectfont}       % 一号, 单倍行距
@@ -135,12 +113,7 @@
 
 
 
-%% 设置西文字体为 Times New Roman
-\RequirePackage{fontspec}
-\setmainfont{Times New Roman}
-%%\RequirePackage{mathspec}
-%%\setallmathfont{Times New Roman}  %% 不知道为什么与上面的全局西文字体的设置发生了冲突
-%%
+
 
 
 \ifxetex
