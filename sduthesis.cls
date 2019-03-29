@@ -148,7 +148,9 @@
     \chead{\small Shandong University Bachelor Thesis}
   \fi
 }
-\fancyfoot[OR, EL]{--~{\thepage}~--}}
+\fancyfoot[C]{\thepage}}
+%%\fancyfoot[OR, EL]{--~{\thepage}~--}}
+%%\fancyfoot[CE,CO]{\thepage}
 \numberwithin{equation}{chapter}
 \graphicspath{{figures/}{figure/}{pictures/}
       {picture/}{pic/}{pics/}{image/}{images/}}

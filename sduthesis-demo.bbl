@@ -1,0 +1,9 @@
+\begin{thebibliography}{1}
+
+\bibitem{DBLP:journals/sac/Braak06}
+Cajo J.~F. ter Braak.
+\newblock A markov chain monte carlo version of the genetic algorithm
+  differential evolution: easy bayesian computing for real parameter spaces.
+\newblock {\em Statistics and Computing}, 16(3):239--249, 2006.
+
+\end{thebibliography}

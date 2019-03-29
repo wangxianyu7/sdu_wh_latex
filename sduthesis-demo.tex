@@ -227,7 +227,7 @@ Graduting from SDU, I am suffering from lovesickness for the beauties, say the b
 
 \section{师资力量}
 
-截止2013年，学校有教授1107人\upcite{liu}，博士生导师907人\footnote{脚注测试}。其中，诺贝尔物理学奖获得者Peter Grünberg教授加盟山东大学，受聘为特聘教授；山东大学研究生导师莫言教授荣获2012年诺贝尔文学奖。同时，学校有中国科学院和工程院院士9人，双聘院士43人，山东大学终身教授11人，山东大学人文社科一级教授14人；「千人计划」国家特聘教授22人，「青年千人计划」5人；国务院学位委员会学科评议组成员7人；国家百千万人才工程入选者26人；教育部「长江学者奖励计划」特聘教授、讲座教授39人，国家级教学团队8个，长江学者创新团队7个，国家杰出青年基金获得者32人，山东省泰山学者特聘专家教授45位、泰山学者海外特聘专家22位、泰山学者攀登计划人选4位，国家级教学名师9人。
+截止2013年，学校有教授1107人，博士生导师907人。其中，诺贝尔物理学奖获得者Peter Grünberg教授加盟山东大学，受聘为特聘教授；山东大学研究生导师莫言教授荣获2012年诺贝尔文学奖。同时，学校有中国科学院和工程院院士9人，双聘院士43人，山东大学终身教授11人，山东大学人文社科一级教授14人；「千人计划」国家特聘教授22人，「青年千人计划」5人；国务院学位委员会学科评议组成员7人；国家百千万人才工程入选者26人；教育部「长江学者奖励计划」特聘教授、讲座教授39人，国家级教学团队8个，长江学者创新团队7个，国家杰出青年基金获得者32人，山东省泰山学者特聘专家教授45位、泰山学者海外特聘专家22位、泰山学者攀登计划人选4位，国家级教学名师9人。
 
 \subsection{两院院士}
 
@@ -257,8 +257,15 @@ Graduting from SDU, I am suffering from lovesickness for the beauties, say the b
 \end{tabular}
 \end{table}
 
-\section{不明所以的公式测试}
-$t_{\mathrm{occ}}(E)=t_{0}+\frac{P_{\mathrm{a}}}{2}+P_{\mathrm{s}} E+\frac{e P_{\mathrm{a}}}{\pi} \cos \omega$
+\section{功能测试区域}
+公式测试：$t_{\mathrm{occ}}(E)=t_{0}+\frac{P_{\mathrm{a}}}{2}+P_{\mathrm{s}} E+\frac{e P_{\mathrm{a}}}{\pi} \cos \omega$  
+
+\LaTeX 文献引用环境thebibliography测试\upcite{liu}
+
+Bibtex引用文献管理环境测试\cite{DBLP:journals/sac/Braak06}。
+Bibtex使用方法：在.bib文件中载入标准文献格式，cite引用，先xelatex，再bibtex，再xelatex
+
+脚注测试\footnote{脚注测试}
 
 
 \chapter{山东大学图志：秋忆——山大之恋}
@@ -353,12 +360,14 @@ $t_{\mathrm{occ}}(E)=t_{0}+\frac{P_{\mathrm{a}}}{2}+P_{\mathrm{s}} E+\frac{e P_{
 
 二〇〇六年十一月十日
 \end{minipage}
-
+%%thebibliography环境
 \begin{thebibliography}{1}
 \bibitem{liu} 刘海洋. \LaTeX 入门 [M]. 北京: 电子工业出版社, 2013.
 \bibitem{hu}  胡伟. \LaTeX 2e完全学习手册(第二版). 北京: 清华大学出版社, 2013.
 \end{thebibliography}
-
+%%Bibtex
+ \bibliographystyle{plain} 
+\bibliography{reference}
 \end{document}
 %% 
 %% Copyright (C) 2012 -- 2014 by Liam Huang
