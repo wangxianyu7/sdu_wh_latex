@@ -39,11 +39,17 @@ Liam Huang原版山东大学硕博毕业论文LaTeX模版： http://www.latexstu
 
 ### 一些报错解决方案：
 1. WinEdt读取该文件显示 error reading， 解决方案参考：https://blog.csdn.net/garfielder007/article/details/51619821
-2. 缺少某个字体 如何安装字体：https://zhidao.baidu.com/question/39166963.html
-   
+2. 缺少某个字体  
+   1.方法一 自己安装
+   如何安装字体：https://zhidao.baidu.com/question/39166963.html
+
    字体下载网址： http://www.3673.com/font/2168.html  
    
-   用到的额外字体：华文新魏（STXinwei）、西文字体Times New Roman、方正粗宋（FZCuSong-B09S）、方正大黑（FZDaHei-B02S）
+   用到的额外字体：华文新魏（STXinwei）、西文字体Times New Roman、方正粗宋（FZCuSong-B09S）、方正大黑（FZDaHei-B02S），在文件夹fonts_installation中都有，拷贝到C:\Windows\Fonts
+   2.脚本安装
+   在文件夹fonts_installation运行bat文件即可。
+
+
 
 
 ## Installation / 安装
