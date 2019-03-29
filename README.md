@@ -96,4 +96,5 @@ Email: xiangyuwang7@gmail.com
 ## 维护日志
 
 ### 2019.03.29
-增加字体方正粗宋（FZCuSong-B09S）、方正大黑（FZDaHei-B02S）
+增加字体方正粗宋（FZCuSong-B09S）、方正大黑（FZDaHei-B02S）  
+添加Bibtex管理参考文献示例，改页码居中
