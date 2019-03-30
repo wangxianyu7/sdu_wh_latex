@@ -109,3 +109,6 @@ Email: xiangyuwang7@gmail.com
 ### 2019.03.29
 增加字体方正粗宋（FZCuSong-B09S）、方正大黑（FZDaHei-B02S）  
 添加Bibtex管理参考文献示例，改页码居中
+
+### 2019.03.30
+添加TikZ绘图测试、Tikz教程和Tikz Gallery
