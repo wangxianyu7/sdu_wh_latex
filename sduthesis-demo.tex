@@ -43,11 +43,12 @@
 \title{\the\Ctitle}
 \author{\the\Cauthor}
 \date{\the\Cdate}
-
+\usepackage{tikz}
 \usepackage{subfig}
 \usepackage{tabu}
 \usepackage{booktabs}
-
+\usepackage{hyperref }
+\usepackage{url} 
 \begin{document}
 \maketitlepagestatement
 
@@ -260,16 +261,36 @@ Graduting from SDU, I am suffering from lovesickness for the beauties, say the b
   \bottomrule
 \end{tabular}
 \end{table}
-
+\clearpage
 \section{功能测试区域}
-公式测试：$t_{\mathrm{occ}}(E)=t_{0}+\frac{P_{\mathrm{a}}}{2}+P_{\mathrm{s}} E+\frac{e P_{\mathrm{a}}}{\pi} \cos \omega$  
+1. 公式测试：$t_{\mathrm{occ}}(E)=t_{0}+\frac{P_{\mathrm{a}}}{2}+P_{\mathrm{s}} E+\frac{e P_{\mathrm{a}}}{\pi} \cos \omega$  
 
-\LaTeX 文献引用环境thebibliography测试\upcite{liu}
+2. \LaTeX 文献引用环境thebibliography测试\upcite{liu}
 
-Bibtex引用文献管理环境测试\cite{DBLP:journals/sac/Braak06}。
+3. Bibtex引用文献管理环境测试\cite{DBLP:journals/sac/Braak06}。
 Bibtex使用方法：在.bib文件中载入标准文献格式，cite引用，先xelatex，再bibtex，再xelatex
 
-脚注测试\footnote{脚注测试}
+4. 脚注测试\footnote{脚注测试}
+
+5. Tikz绘图测试，Tikz入门教程：\url{http://www.fuzihao.org/blog/2015/08/11/TikZ%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/}
+
+TikZ and PGF examples：\href{http://www.texample.net/tikz/examples/}{http://www.texample.net/tikz/examples/}
+
+
+\begin{center}
+ \begin{tikzpicture}[domain=0:4]
+  \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+  \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
+  \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
+  \draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
+  % \x r 表示弧度
+  \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
+  \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+\end{tikzpicture}
+\end{center}
+
+
+
 
 
 \chapter{山东大学图志：秋忆——山大之恋}
