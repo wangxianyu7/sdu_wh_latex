@@ -71,7 +71,7 @@ Liam Huang原版山东大学硕博毕业论文LaTeX模版： http://www.latexstu
 编译平台：
 1. Ctex。 下载镜像：http://www.ctex.org/CTeXDownload/
 2. TEX-live 下载镜像： https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
-3. 在线latex编辑平台[Overleaf](https://www.overleaf.com/project)。**注意**，如果使用该平台，请将主文件夹的.def文件替换为overleaf_def文件夹中的.def文件。但是不支持复杂字体，如魏书等。建议完成毕业论文的编写后，可以在本地再次编译一次，以确保字体格式符合要求。
+3. 在线latex编辑平台[Overleaf](https://www.overleaf.com/project)。**注意**，如果使用该平台，请将编译器改为Xelatex，以及将主文件夹的.def文件替换为overleaf_def文件夹中的.def文件。但是不支持复杂字体，如魏书等。建议完成毕业论文的编写后，可以在本地再次编译一次，以确保字体格式符合要求。
 
 ### Remove temp-files / 删除临时文件
 
