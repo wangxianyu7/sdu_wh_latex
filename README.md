@@ -69,8 +69,9 @@ Liam Huang原版山东大学硕博毕业论文LaTeX模版： http://www.latexstu
 上述为指令编译指令，适合于已安装xelatex的各个平台。
 ### platform / 平台
 编译平台：
-1. WinEdt。 下载镜像：http://www.ctex.org/CTeXDownload/
+1. Ctex。 下载镜像：http://www.ctex.org/CTeXDownload/
 2. TEX-live 下载镜像： https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
+3. 在线latex编辑平台[Overleaf](https://www.overleaf.com/project)。**注意**，如果使用该平台，请将主文件夹的.def文件替换为overleaf_def文件夹中的.def文件。但是不支持复杂字体，如魏书等。建议完成毕业论文的编写后，可以在本地再次编译一次，以确保字体格式符合要求。
 
 ### Remove temp-files / 删除临时文件
 
@@ -100,7 +101,8 @@ If you are interested in the process of development you may observe
 [liam-ctan]: http://www.ctan.org/author/huang-l
 
 ## 修改者
-Xianyu Wang
+Xianyu Wang  
+
 Email: xiangyuwang7@gmail.com
 
 --------------------------------------------------------------------------
@@ -112,3 +114,6 @@ Email: xiangyuwang7@gmail.com
 
 ### 2019.03.30
 添加TikZ绘图测试、Tikz教程和Tikz Gallery
+
+### 2019.04.02
+添加字体设置文件overleaf_def/sduthesis-cover.def以适应overleaf中只有有限的中文字体的情况。

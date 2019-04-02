@@ -37,8 +37,8 @@
 \newtoks\Grade      % 年级
 \newcommand{\LeftLength}{2.3cm}
 \newcommand{\RightLength}{5.5cm}
-\newcommand{\Mcs}[1]{\makebox[\LeftLength][s]{{\zihao{3}\fzchs{}#1}}}
-\newcommand{\Mcc}[1]{\makebox[\RightLength][c]{{\zihao{4}\kaishu{}#1}}}
+\newcommand{\Mcs}[1]{\makebox[\LeftLength][s]{{\zihao{3}\textbf{}#1}}}
+\newcommand{\Mcc}[1]{\makebox[\RightLength][c]{{\zihao{4} \textit{}#1}}}
 \newcommand{\maketitlepage}{%
 \thispagestyle{empty}
 \begin{center}
@@ -47,13 +47,13 @@
 {
   {\includegraphics[width = .85\textwidth]{figures/sdu_logo.png}}\\[3mm]
   \par \vskip 15mm \relax
-  {\scalebox{4}{\zihao{6}\hwxw{}毕业设计（论文）}}
+  {\scalebox{4}{\zihao{6} 毕业设计（论文）}}
 }
 \par \vskip 15mm \relax
 \vskip \stretch{2}
 {
 	\begin{tabular}{r@{   }l}
-    \zihao{4}\fzdahei{设计（论文）题目 }& \zihao{3}\heiti\parbox[c]{200pt}{\the\Ctitle}\\[0mm]\cline{2-1} %%[c] 使得左侧文字居中
+    \zihao{4}{设计（论文）题目 }& \zihao{3}\parbox[c]{200pt}{\the\Ctitle}\\[0mm]\cline{2-1} %%[c] 使得左侧文字居中
     \end{tabular}
 }
 \vfill
@@ -70,7 +70,7 @@
 }
 \par \vskip 20mm \relax
 {
-\zihao{3}\fzdahei \the\Cdate
+\zihao{3}\the\Cdate
 }
 \end{center}
 \clearpage
