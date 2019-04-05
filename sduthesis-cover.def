@@ -37,35 +37,31 @@
 \newtoks\Grade      % 年级
 \newcommand{\LeftLength}{2.3cm}
 \newcommand{\RightLength}{5.5cm}
-\newcommand{\Mcs}[1]{\makebox[\LeftLength][s]{{\zihao{3}\fzchs{}#1}}}
+\newcommand{\Mcs}[1]{\makebox[\LeftLength][s]{{\zihao{3}\fzdahei{}#1}}}
 \newcommand{\Mcc}[1]{\makebox[\RightLength][c]{{\zihao{4}\kaishu{}#1}}}
 \newcommand{\maketitlepage}{%
 \thispagestyle{empty}
 \begin{center}
-~
-\vskip 8mm\relax
 {
-  {\includegraphics[width = .85\textwidth]{figures/sdu_logo.png}}\\[3mm]
-  \par \vskip 15mm \relax
-  {\scalebox{4}{\zihao{6}\hwxw{}毕业设计（论文）}}
+  {\hskip -16mm   \includegraphics[width = 0.9\textwidth]{figures/sdu_logo.png}}
+  \par \vskip 8mm \relax
+  \centerline{\ershibahao \hwxw \hskip 18mm 毕业论文（设计）}
 }
-\par \vskip 15mm \relax
-\vskip \stretch{2}
+\par \vskip 22mm \relax
 {
 	\begin{tabular}{r@{   }l}
-    \zihao{4}\fzdahei{设计（论文）题目 }& \zihao{3}\heiti\parbox[c]{200pt}{\the\Ctitle}\\[0mm]\cline{2-1} %%[c] 使得左侧文字居中
+    \hskip -13mm \zihao{4}\fzdahei{设计\hskip -1mm（\hskip -2mm 论文 \hskip -3mm）\hskip -1mm题目 }& \hskip 5mm \zihao{3}\heiti\parbox[c]{200pt}{\the\Ctitle}\\[7mm]\cline{2-1} %%[c] 使得左侧文字居中
     \end{tabular}
 }
-\vfill
-\vfill
+\par \vskip 32mm \relax
 {
   \begin{tabular}{p{\LeftLength}p{\RightLength}}    
-  \Mcs{姓名:}& \Mcc{\the\Cauthor}\\[-.8mm]\cline{2-2}\\[-4mm]
-  \Mcs{学号:}& \Mcc{\the\StuNum}\\[-.8mm]\cline{2-2}\\[-4mm]
-  \Mcs{学院:}& \Mcc{\the\Dpart}\\[-.8mm]\cline{2-2}\\[-4mm]
-  \Mcs{专业:}& \Mcc{\the\Cmajor}\\[-.8mm]\cline{2-2}\\[-4mm]
-  \Mcs{年级:}& \Mcc{\the\Grade}\\[-.8mm]\cline{2-2}\\[-4mm]
-  \Mcs{指导老师:}& \Mcc{\the\Csuperver}\\[-.8mm]\cline{2-2}
+  \Mcs{姓\hskip 9mm名 ：}& \Mcc{\the\Cauthor}\\[3mm]\cline{2-2}\\[-4mm]
+  \Mcs{学\hskip 9mm号 ：}& \Mcc{\the\StuNum}\\[3mm]\cline{2-2}\\[-4mm]
+  \Mcs{学\hskip 9mm院 ：}& \Mcc{\the\Dpart}\\[3mm]\cline{2-2}\\[-4mm]
+  \Mcs{专\hskip 9mm业 ：}& \Mcc{\the\Cmajor}\\[3mm]\cline{2-2}\\[-4mm]
+  \Mcs{年\hskip 9mm级 ：}& \Mcc{\the\Grade}\\[3mm]\cline{2-2}\\[-4mm]
+  \Mcs{指导老师：}& \Mcc{\the\Csuperver}\\[3mm]\cline{2-2}
   \end{tabular}
 }
 \par \vskip 20mm \relax

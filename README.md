@@ -105,6 +105,11 @@ Xianyu Wang
 
 Email: xiangyuwang7@gmail.com
 
+参考项目：
+
+1. 上海交通大学学位论文模版 https://github.com/sjtug/SJTUThesis  
+
+2. 厦门大学本科毕业论文 https://github.com/CamuseCao/XMU-Undergraduate-thesis-template
 --------------------------------------------------------------------------
 ## 维护日志
 
@@ -117,3 +122,11 @@ Email: xiangyuwang7@gmail.com
 
 ### 2019.04.02
 添加字体设置文件overleaf_def/sduthesis-cover.def以适应overleaf中只有有限的中文字体的情况。
+### 2019.04.05
+
+根据最新的文件，对目录格式和封面页的格式进行了重排，核对了各个部分的字号
+
+添加附录页、注释页、谢辞页
+
+此处感谢提供格式要求文件的马学弟，祝各位毕设顺利~
+

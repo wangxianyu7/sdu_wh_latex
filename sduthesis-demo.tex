@@ -36,8 +36,8 @@
 \Cauthor{文心湖}             % 作者中文名
 \Dpart{五四广场研究院}               % 学院
 \Cmajor{玛珈山车技研究} % 专业中文名
-\Grade{2014级}                % 年级
-\Csuperver{Mob~~教授}        %指导老师中文名
+\Grade{9102级}                % 年级
+\Csuperver{楼化水~~教授}        %指导老师中文名
 
 \Cdate{\today}
 \title{\the\Ctitle}
@@ -48,7 +48,7 @@
 \usepackage{tabu}
 \usepackage{booktabs}
 \usepackage{hyperref }
-\usepackage{url} 
+\usepackage{pgf} % for the calculation
 \begin{document}
 \maketitlepagestatement
 
@@ -236,9 +236,9 @@ Graduting from SDU, I am suffering from lovesickness for the beauties, say the b
 
 \subsection{两院院士}
 
-\paragraph{科学院院士}彭实戈、钱逸泰、佟振合。
+\subsubsection{科学院院士}彭实戈、钱逸泰、佟振合。
 
-\paragraph{工程院院士}艾兴、张运、王文兴、方家熊、钱七虎、张明高。
+\subsubsection{工程院院士}艾兴、张运、王文兴、方家熊、钱七虎、张明高。
 
 \section{愉快的吐槽}
 
@@ -256,8 +256,8 @@ Graduting from SDU, I am suffering from lovesickness for the beauties, say the b
   \midrule[0.8pt]
   & 兴隆山校区 & 软件园 & 威海校区 & 青岛校区 \\
   \midrule
-  饮食 & 比较差 & 未知 & 一般 & 未知 \\
-  住宿 & 未知 & 未知 & 一般 & 未知\\
+  饮食 & 比较差 & 未知 & 赞 & 赞 \\
+  住宿 & 未知 & 未知 & 赞 & 赞\\
   \bottomrule
 \end{tabular}
 \end{table}
@@ -270,7 +270,8 @@ Graduting from SDU, I am suffering from lovesickness for the beauties, say the b
 3. Bibtex引用文献管理环境测试\cite{DBLP:journals/sac/Braak06}。
 Bibtex使用方法：在.bib文件中载入标准文献格式，cite引用，先xelatex，再bibtex，再xelatex
 
-4. 脚注测试\footnote{脚注测试}
+4. 脚注测试\footnote[1]{\label{footnoot1}脚注测试}， 注意，本latex 模板由Ctex中的book类制作。在 article 类型的文件中，脚注是被从头到尾顺序编号的；在 book 和 report 类型文件中，脚注是每一章各自顺序编号的。如果希望脚注是每一章各自顺序编号的，可不添加[]中的数字，否则需要自己编号。BTW，有函数footnpag，但是不好使。
+
 
 5. Tikz绘图测试，Tikz入门教程：\url{http://www.fuzihao.org/blog/2015/08/11/TikZ%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/}
 
@@ -291,8 +292,6 @@ TikZ and PGF examples：\href{http://www.texample.net/tikz/examples/}{http://www
 
 
 
-
-
 \chapter{山东大学图志：秋忆——山大之恋}
 
 匆匆间，已是初冬。虽置身于这份清冷，我们却还记得独属于秋天的温暖气息。曾经秋风瑟瑟，吹散了大成广场孩童戏水的欢声，也曾暮雨潇潇，滴落了小树林鸟雀低鸣的婉转。山大视点推出“秋忆”系列图志，用相机记录秋日的苒苒物华，探索校园的清秋况味，呈现不一样的秋意山大。
@@ -301,20 +300,20 @@ TikZ and PGF examples：\href{http://www.texample.net/tikz/examples/}{http://www
 
 山大的秋天，是……
 
-如图 \ref{fig:zhixinlou}、\ref{fig:xianzhidadao}、\ref{fig:hongloujiaotang}。
+如图 \ref{fig:zhixinlou}、\ref{fig:xianzhidadao}、\ref{fig:hongloujiaotang}、\ref{fig:weihai}。
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width = 0.8\linewidth]{sduthesis-zhixinlou}
+\includegraphics[width = 0.8\linewidth]{figures/sduthesis-zhixinlou}
 \caption{知新楼上的袅袅轻云}\label{fig:zhixinlou}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
 \subfloat[先志大道的萧萧落叶]{\includegraphics
-  [width = 0.45\linewidth]{sduthesis-xianzhidadao}\label{fig:xianzhidadao}}\quad
+  [width = 0.45\linewidth]{figures/sduthesis-xianzhidadao}\label{fig:xianzhidadao}}\quad
 \subfloat[洪楼教堂的呢喃钟鸣]{\includegraphics
-  [width = 0.45\linewidth]{sduthesis-hongloujiaotang}\label{fig:hongloujiaotang}}\quad
+  [width = 0.45\linewidth]{figures/sduthesis-hongloujiaotang}\label{fig:hongloujiaotang}}\quad
 \caption{千佛山与洪家楼}
 \end{figure}
 
@@ -322,53 +321,81 @@ TikZ and PGF examples：\href{http://www.texample.net/tikz/examples/}{http://www
 \centering
 \begin{minipage}{0.5\linewidth}
 \centering
-\includegraphics[width = 0.95\linewidth]{sduthesis-baotuquan}
+\includegraphics[width = 0.95\linewidth]{figures/sduthesis-baotuquan}
 \caption{古老号院的安然静谧}\label{fig:baotuquan}
 \end{minipage}%
 \begin{minipage}{0.5\linewidth}
 \centering
-\includegraphics[width = 0.95\linewidth]{sduthesis-ruanjianyuan}
+\includegraphics[width = 0.95\linewidth]{figures/sduthesis-ruanjianyuan}
 \caption{软件园区的日新月异}\label{fig:ruanjianyuan}
+
+
+
 \end{minipage}
 \end{figure}
-\appendix
-\chapter{山东大学研究生院关于学位论文的格式要求}
+
+\begin{figure}[!htb]
+\begin{minipage}{0.5\linewidth}
+\centering
+\includegraphics[width = 0.95\linewidth]{figures/sduwh.png}
+\caption{威海校区的图书馆}\label{fig:weihai}
+\end{minipage}
+\end{figure}
+
+\begin{thebibliography}{1}
+\addcontentsline{toc}{chapter}{参考文献}
+\bibitem{liu} 刘海洋. \LaTeX 入门 [M]. 北京: 电子工业出版社, 2013.
+\bibitem{hu}  胡伟. \LaTeX 2e完全学习手册(第二版). 北京: 清华大学出版社, 2013.
+\end{thebibliography}
+
+ \bibliographystyle{plain} 
+\bibliography{reference}
+ \addcontentsline{toc}{chapter}{参考文献Bibtex}
+ 
+\chapter*{\zihao{3}注{\quad}{\quad}{\quad}释}
+\addcontentsline{toc}{chapter}{注释}
+\ref{footnoot1}.脚注测试
+
+\chapter*{\zihao{3} 附{\quad}{\quad}{\quad}录}
+\addcontentsline{toc}{chapter}{附录}
+
+\section{山东大学研究生院关于学位论文的格式要求}
 因为没有找到关于学士学位论文的格式要求，这里附上一段研究生院的要求，仅供参考。
-\section{学位论文的基本要求}
+\subsection{学位论文的基本要求}
 硕士学位论文一般应用中文撰写，提倡并鼓励用中、外文撰写。理学、工学、医学类博士学位论文须用中、外文撰写，人文社科类博士学位论文提倡并鼓励用中、外撰写。博士学位论文字数一般3--10万字，摘要为3000字以上；硕士学位论文字数一般2--5万字，摘要为1000字左右。
-\section{学位论文的结构要求}
+\subsection{学位论文的结构要求}
 博士、硕士学位论文一般应由以下几部分组成，依次为：
 \begin{enumerate}
 \item 论文封面；\item 扉页；\item 原创性声明和关于论文使用授权的声明；\item 中、外文论文目录；\item 中文摘要；\item 外文摘要；\item 符号说明；\item 论文正文（包括文献综述）；\item 附录、附图表；\item 引文出处及参考文献；\item 致谢；\item 攻读学位期间发表的学术论文目录；\item 学位论文评阅及答辩情况；\item 外文论文。
 \end{enumerate}
-\section{学位论文的格式要求}
-\subsection{论文封面}
+\subsection{学位论文的格式要求}
+\subsubsection{论文封面}
 采用研究生院统一印制的封面。封面的论文题目需要中、外文标示。用小二号加重黑体字打印封面的中文论文题目，用三号加重打印封面外文论文题目，四号加重黑体字打印脊背处论文题目和封面作者姓名、专业、指导教师、合作导师姓名和专业技术职务、论文完成时间、密级、学校代码、学号、分类号等内容。论文题目不得超过30个汉字。分类号须采用《中国图书资料分类法》进行标注。
-\subsection{扉页}
+\subsubsection{扉页}
 论文设扉页，其内容与封面相同，送交校学位办公室、图书馆和档案馆的论文其扉页由本人用碳素钢笔填写。
-\subsection{原创性声明和关于学位论文使用授权的说明}
+\subsubsection{原创性声明和关于学位论文使用授权的说明}
 论文作者和指导教师在向校学位办公室、图书馆、档案馆提交论文时必须在要求签名处签字。
-\subsection{论文目录}
+\subsubsection{论文目录}
 论文需要有中外文目录各一份。目录应将文内的章、节标题依次排列，并注明页码。标题应简明扼要。中文的「目录」标题字用小三号加重黑体字打印，目录内容用小四号宋体打印。外文的「目录」标题字用加重小三号字体大写字母打印，目录内容用小四号字体小写字母打印。
-\subsection{中文摘要}
+\subsubsection{中文摘要}
 中文摘要应以最简洁的语言介绍论文的内容要点，其中包括研究目的、研究方法、结果、结论及意义等，并注意突出论文中的新论点、新见解或创造性的成果，并在摘要后列出3--5个关键词，之间用分号相隔。关键词应体现论文的主要内容，词组符合学术规范。「中文摘要」 标题字用小三号加重黑体字打印，摘要内容用小四号宋体打印。
-\subsection{外文摘要}
+\subsubsection{外文摘要}
 外文摘要内容应与中文摘要基本一致，要语句通顺，语法正确，准确反映论文的内容，并在其后列出与中文相对应的外文关键词。「摘要」标题字用加重小三号字体大写字母打印，摘要内容用小四号字体小写字母打印。
 \subsection{符号说明}
 介绍论文中所用符号表示的意义。
-\subsection{论文正文}
+\subsubsection{论文正文}
 正文是学位论文的主体和核心部分。论文应在前言中包含必要的文献综述，并用小标题标明。论文中的计量单位、制图、制表、公式、缩略词和符号必须遵循国家规定的标准。其行文方式和文体的格局，研究生可根据自己研究课题的表达需要不同而变化，灵活掌握。论文题目用小三号黑体字打印，内容用小四号宋体打印，一般每行32--34字，每页29--31行。每页要有页眉，其上居中打印「山东大学博（硕）士学位论文」字样，页码标注在页面低端（页角）外侧。 论文中的章的标题用小三号加重黑体；节的标题用四号加重黑体；目及子目以下的标题用小四号加重黑体打印，标题应简明扼要，体现阐述内容的重点，无标点符号。
-\subsection{附录、附图表}
+\subsubsection{附录、附图表}
 主要列入正文内过分冗长的公式推导，供查读方便所需的辅助性数学工具或表格；重复性数据图表；实验性图片；程序全文及说明等。
-\subsection{引文出处及参考文献}
+\subsubsection{引文出处及参考文献}
 人文社科类学位论文应有详细的引文出处，格式应规范，一般标注于论文每一页的下方或每一章节的结尾位置。参考文献按文中使用的顺序列出，并注明文献的作者、题名、刊物（出版社）名称、出版时间、页码等。理学、工学、医学类学位论文按国际惯例执行。
-\subsection{致谢}
+\subsubsection{致谢}
 系对给予各类资助、指导和协助完成研究工作以及提供各种对论文工作有利条件的单位和个人表示的感谢。致谢应实事求是，切忌浮夸之词。
-\subsection{攻读学位期间发表的学术论文目录}
+\subsubsection{攻读学位期间发表的学术论文目录}
 按学术论文发表的时间顺序，列出本人在攻读学位期间发表或已录用的主要学术论文清单，包括顺序号、论文题名、刊物名称、卷册号及年月、起止页码、论文署名位次。
-\subsection{学位论文评阅及答辩情况}
+\subsubsection{学位论文评阅及答辩情况}
 论文答辩通过后，送校学位办公室、图书馆和档案馆的论文需将学位论文评阅及答辩情况填入《学位论文评阅及答辩情况表》中。
-\subsection{外文论文}
+\subsubsection{外文论文}
 \subsubsection{外文论文写作的形式}
 可根据本学科的实际选择以下写作形式的其中一种。
 \begin{enumerate}
@@ -377,22 +404,61 @@ TikZ and PGF examples：\href{http://www.texample.net/tikz/examples/}{http://www
 \end{enumerate}
 \subsubsection{外语写作的要求}
 学位论文外语写作要语句通顺，语法正确，符合该种语言的写作规范，能准确反映作者的学术思想。论文内容用小四号字体小写字母打印。
-\section{学位论文的打印与装订}
+\subsection{学位论文的打印与装订}
 论文用A4标准纸输出，双面打印。博士学位论文一式25份，硕士学位论文一式15份，装订成册，并按要求送交有关部门（送校图书馆和档案馆的论文需线装）。中、外文学位论文原则上一起装订，如篇幅过长可分别装订。除外语专业的学位论文外，其它学科的学位论文一律中文论文在前，外文论文在后。
 \vfill
 \hfill\begin{minipage}{.3\textwidth}
 山东大学研究生院
-
 二〇〇六年十一月十日
 \end{minipage}
-%%thebibliography环境
-\begin{thebibliography}{1}
-\bibitem{liu} 刘海洋. \LaTeX 入门 [M]. 北京: 电子工业出版社, 2013.
-\bibitem{hu}  胡伟. \LaTeX 2e完全学习手册(第二版). 北京: 清华大学出版社, 2013.
-\end{thebibliography}
-%%Bibtex
- \bibliographystyle{plain} 
-\bibliography{reference}
+\section{山东大学威海研究生院关于学位论文的格式要求}
+%%\addcontentsline{toc}{section}{B.山东大学威海研究生院关于学位论文的格式要求}
+\subsection{目录}
+目录：另起页；标题使用3号黑体字，“目录”两字中间空3个汉字字符格；内容使用4号宋体字，要求标明页码，每项内容与对应的页码之间要求使用省略号分隔开。
+\subsection{中文摘要}
+中文摘要（含关键词）：另起页；标题使用3号黑体字，两个标题各自独占行，居中，“摘要”两字中间空3个汉字字符格，“关键词”三字每两字中间空1个汉字字符格；内容使用4号宋体字，单倍行距。
+\subsection{英文摘要}
+英文摘要（含关键词）：与中文摘要和关键词同页；标题使用小2号Times New Roman字体，两个标题各自独占行，居中；内容使用小3号Times New Roman字体，单倍行距。
+\subsection{正文}
+正文 ：另起页；
+正文文中标题：
+\subsubsection{一级标题}
+    一级标题：标题序号为“一、”， 4号黑体字，独占行，末尾不加标点符号。
+\subsubsection{二级标题}
+  二级标题：标题序号为“（一）”与正文字号相同，独占行，末尾不加标点符号。
+  \subsubsection{三级标题}
+ 三级标题：标题序号为“ 1. ”与正文字号、字体相同。
+ \subsubsection{四级标题}
+    四级标题：标题序号为“（1）”与正文字号、字体相同。
+ \subsubsection{五级标题}
+五级标题：标题序号为$\circled{1}$与正文字号、字体相同。
+其它内容全部使用小4号宋体字，单倍行距。
+\paragraph{五级标题测试}~{}
+\newline
+五级标题测试
+
+\subsection{参考文献}
+参考文献：另起页；标题使用3号黑体字，标题汉字之间无空格，独占行，居中；内容使用小4号宋体字，单倍行距。
+\subsection{注释}
+注释：另起页；标题使用3号黑体字，“注释”两字中间空3个汉字字符格，独占行，居中；内容使用小4号宋体字，单倍行距。
+\subsection{附录}
+附录：另起页；标题使用3号黑体字，“附录”两字中间空3个汉字字符格，独占行，居中；内容使用小4号宋体字，单倍行距。
+\subsection{谢辞}
+谢辞：另起页；标题使用3号黑体字，“谢辞”两字中间空3个汉字字符格，独占行，居中；内容使用4号宋体字，单倍行距。
+\subsection{封底}
+封底：另起页，空白。
+
+
+\clearpage
+\chapter*{\zihao{3} 谢{\quad}{\quad}{\quad}辞}
+\addcontentsline{toc}{chapter}{谢辞}
+\zihao{4}
+\center
+
+学无止境，气有浩然。
+
+凡我在处，便是山大。
+\clearpage
 \end{document}
 %% 
 %% Copyright (C) 2012 -- 2014 by Liam Huang

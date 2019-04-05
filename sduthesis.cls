@@ -40,12 +40,22 @@
 \DeclareComplementaryOption{noprint}{print}
 \DeclareBoolOption[true]{double}
 \DeclareComplementaryOption{single}{double}
+%%\usepackage{ctexcap}
+%%目录的制作是通过超链接制作的，如果没有生成合适的中文目录，可能是汉字没有解析？
+\LoadClass[zihao=-4,a4paper, cs4size, space, UTF8,fancyhdr, appendix, ctexcap, hyperref, openany, scheme=chinese,fontset=none,UTF8]{ctexbook}
+\RequirePackage[unicode,pdfencoding=auto]{hyperref}
+%%\RequirePackage[space=true]{ctex}
+%%\usepackage{ctexcap}
 \DeclareDefaultOption{\PassOptionsToPackage{\CurrentOption}{ctexcap}}
-\LoadClass[a4paper, cs4size, UTF8, hyperref, fancyhdr, openany]{ctexbook}
+
 \ProcessKeyvalOptions*\relax
 \ifSDU@opt@double\relax\else
   \PassOptionsToClass{twoside}{ctexbook}
 \fi
+\RequirePackage{appendix}
+\RequirePackage{fontspec}
+\RequirePackage{titletoc}
+\RequirePackage{titlesec}
 \RequirePackage{ifpdf,ifxetex}
 \RequirePackage{geometry}
 \RequirePackage{amsmath}
@@ -83,7 +93,13 @@
 \setmainfont{Times New Roman}
 %%\RequirePackage{mathspec}
 %%\setallmathfont{Times New Roman}  %% 不知道为什么与上面的全局西文字体的设置发生了冲突
-
+\RequirePackage{tikz}
+\RequirePackage{etoolbox}
+\newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
+    {\node[shape = circle, draw, inner sep = 1pt]
+    (char) {\phantom{\ifblank{#1}{#2}{#1}}};%
+    \node at (char.center) {\makebox[0pt][c]{#2}};}}
+\robustify{\circled}
   
   
   
@@ -110,10 +126,29 @@
 \newcommand*{\HUA}[1]{\ensuremath{\mathscr{{#1}}}}
 \newcommand*{\SHUANG}[1]{\ensuremath{\mathbb{{#1}}}}
 
+%% 设置西文字体为 Times New Roman
+\setmainfont{Times New Roman}
+%%\RequirePackage{mathspec}
+%%\setallmathfont{Times New Roman}  %% 不知道为什么与上面的全局西文字体的设置发生了冲突
+%%
+%%%%%%%%%%%%% Contents %%%%%%%%%%%%%%%%%
 
+\RequirePackage[titles]{tocloft}
+\usepackage{titletoc}
 
+\renewcommand{\contentsname}{\bfseries\zihao{3}目{\qquad}  录}
 
+\titlecontents{chapter}[2em]{ \zihao{4}}{\contentslabel{2em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+\titlecontents{section}[4em]{ \zihao{4}}{\contentslabel{3em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+\titlecontents{subsection}[5em]{\zihao{4}}{\contentslabel{1.2em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+\titlecontents{subsubsection}[7em]{\zihao{4}}{\contentslabel{2em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+\titlecontents{paragraph}[8em]{\zihao{4}}{\contentslabel{1.2em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+%%控制命令解释 
+%% \contentslabel{2em} 目录的名字和前面的章节数字的距离  例如一、2em大纲
 
+%%控制目录深度
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
 
 
 \ifxetex
@@ -130,9 +165,9 @@
 \linespread{1.3}
 \setlength{\parskip}{0.3ex}
 \ifSDU@opt@double
-  \geometry{left=2.5cm, right=3cm, top=3cm, bottom=3cm}
+  \geometry{left=3.18cm, right=3.18cm, top=2.54cm, bottom=2.54cm}
 \else
-  \geometry{left=2.75cm, right=2.75cm, top=3cm, bottom=3cm}
+  \geometry{left=3.18cm, right=3.18cm, top=2.54cm, bottom=2.54cm}
 \fi
 \AtBeginDocument{\pagestyle{fancy}
 \fancyhf{}
@@ -166,62 +201,99 @@
 \newcommand\enabstractname{ABSTRACT}
 \newcommand\enkeywordsname{Key words}
 \newcommand\enkeywords[1]{%
-  \vspace{1cm}\noindent{\bfseries\zihao{-4}\enkeywordsname: }#1}
-\newcommand\cnabstractname{摘\quad 要}
-\newcommand\cnkeywordsname{关键词}
+  \vspace{1cm}\noindent{\bfseries\zihao{-3}\enkeywordsname: }#1}
+ %%中文摘要
+\newcommand\cnabstractname{\bfseries 摘{\quad} {\quad} {\quad} 要}
+\newcommand\cnkeywordsname{关{\quad} 键{\quad} 词}
 \newcommand\cnkeywords[1]{%
-  \vspace{1cm}\noindent{\bfseries\zihao{-4}\cnkeywordsname: }#1}
+  \vspace{1cm}\noindent{\bfseries \zihao{-4}\cnkeywordsname: }#1}
   
 %%定义英文摘要格式
+%\newenvironment{enabstract}{%
+%  \newpage
+%  \centering
+%  \begin{minipage}{.9\textwidth}
+%  \par \vskip 20mm \relax %%避免开头置顶
+%  \centerline{\zihao{-2}\bfseries\enabstractname}\vspace{.3cm}
+%  \centering
+%  \begin{minipage}{.85\textwidth}
+%  \setlength{\parindent}{1.2em}
+%  \zihao{-3}
+%}{
+%\end{minipage}
+%\end{minipage}
+%}
 \newenvironment{enabstract}{%
-  \newpage
   \centering
-  \begin{minipage}{.9\textwidth}
-  \par \vskip 20mm \relax %%避免开头置顶
-  \centerline{\zihao{-3}\bfseries\enabstractname}\vspace{.3cm}
-  \centering
-  \begin{minipage}{.85\textwidth}
-  \setlength{\parindent}{1.2em}
+  \begin{minipage}{1\textwidth}
+  \vskip 20mm \relax
+  \centerline{\zihao{-2}\bfseries\enabstractname}\vspace{.3cm}
+  \setlength{\parindent}{2em}
+  \zihao{-3}
 }{
 \end{minipage}
-\end{minipage}
-\clearpage
 }
 %%定义中文摘要格式
 \newenvironment{cnabstract}{%
   \newpage
   \centering
-  \begin{minipage}{.9\textwidth}
+  \begin{minipage}{1\textwidth}
   \par \vskip 20mm \relax %%避免开头置顶
-  \centerline{\zihao{-3}\bfseries\cnabstractname}\vspace{.3cm}
+  \centerline{\zihao{3}\bfseries\cnabstractname}\vspace{.3cm}
   \centering
-  \begin{minipage}[c]{.85\textwidth}
+  \begin{minipage}[c]{1\textwidth}
   \setlength{\parindent}{2em}
-  \zihao{-4}
+  \zihao{4}
 }
 {
 \end{minipage}
 \end{minipage}
-\clearpage
 }
 \ifSDU@opt@chsstyle
-  \CTEXsetup[name={第,章}]{chapter}
+  %%chapter setting
+  \CTEXsetup[name={,、}]{chapter}
   \CTEXsetup[number={\chinese{chapter}}]{chapter}
   \CTEXsetup[format={\centering}]{chapter}
-  \CTEXsetup[nameformat={\bfseries\zihao{3}}]{chapter}
-  \CTEXsetup[titleformat={\bfseries\zihao{3}}]{chapter}
-  \CTEXsetup[aftername={\quad{}}]{chapter}
-  \CTEXsetup[beforeskip={10pt}]{chapter}
-  \CTEXsetup[afterskip={10pt}]{chapter}
-  \CTEXsetup[name={$\S$\,,}]{section}
-  \CTEXsetup[format={\bfseries\flushleft\zihao{4}}]{section}
-  \CTEXsetup[format={\bfseries\flushleft\zihao{-4}}]{subsection}
+  \CTEXsetup[nameformat={\bfseries\zihao{4}}]{chapter}
+  \CTEXsetup[titleformat={\bfseries\zihao{4}}]{chapter}
+  \CTEXsetup[aftername={}]{chapter}
+  %%\CTEXsetup[beforeskip={0pt}]{chapter}
+  \CTEXsetup[afterskip={0pt}]{chapter}
+  %%section setting
+  \CTEXsetup[name={（,）}]{section} 
+  \CTEXsetup[number={\chinese{section}}]{section}
+  \CTEXsetup[aftername={}]{section}
+  \CTEXsetup[format={\flushleft\zihao{4}}]{section}
+  %%subsection setting
+  \CTEXsetup[name={,.}]{subsection}
+  \CTEXsetup[aftername={}]{subsection}
+  \CTEXsetup[format={\flushleft\zihao{-4}}]{subsection}
+  \CTEXsetup[number={\arabic{subsection}}]{subsection}
+  %%subsubsection setting
+  \CTEXsetup[name={（,）}]{subsubsection}
+  \CTEXsetup[aftername={}]{subsubsection}
   \CTEXsetup[format={\flushleft\zihao{-4}}]{subsubsection}
+  \CTEXsetup[number={\arabic{subsubsection}}]{subsubsection}
+   %%paragraph setting
+  \CTEXsetup[name={,}]{paragraph}
+  \CTEXsetup[aftername={\quad}]{paragraph}
+  %%\CTEXsetup[afterskip={0pt}]{paragraph}
+  \CTEXsetup[format={\flushleft\zihao{-4}}]{paragraph}
+  \CTEXsetup[number={\circled{\arabic{paragraph}}}]{paragraph}
+  %%appendix setting
   \CTEXsetup[name={附录~}]{appendix}
-  \CTEXsetup[number={\Alph{chapter}}]{appendix}
+  \CTEXsetup[number={{}}]{appendix}
 \else
   \PassOptionsToClass{nocap, noindent}{ctexbook}
 \fi
+\renewcommand{\thesection}{（\chinese{section}）{\hspace*{-2em}}}
+\renewcommand\thesubsection{\arabic{subsection}.}
+\renewcommand\thesubsubsection{（\arabic{subsubsection}）}
+\renewcommand\theparagraph{\circled{\arabic{paragraph}}}
+\renewcommand\bibname{\bfseries\zihao{3} 参考文献}
+
+%%\titleformat\{\section}{\flushleft\zihao{-4}}{\chinese{section}\,、}{0em}{}{}
+
 
 \input{sduthesis-cover.def}
 \newcommand{\maketitlepagestatement}{%
