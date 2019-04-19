@@ -39,7 +39,7 @@
 \newcommand{\RightLength}{5.5cm}
 \newcommand{\Mcs}[1]{\makebox[\LeftLength][s]{{\zihao{3}\fzdahei{}#1}}}
 \newcommand{\Mcc}[1]{\makebox[\RightLength][c]{{\zihao{4}\kaishu{}#1}}}
-\newcommand{\maketitlepage}{%
+\newcommand{\maketitlepage}{
 \thispagestyle{empty}
 \begin{center}
 {

@@ -129,4 +129,5 @@ Email: xiangyuwang7@gmail.com
 添加附录页、注释页、谢辞页
 
 此处感谢提供格式要求文件的马学弟，祝各位毕设顺利~
-
+### 2019.04.19
+删除弃用的command(\maketitlepagestatement→\maketitlepage)， 最近比较忙没有时间改warnings，但是不耽误使用
