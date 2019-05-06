@@ -134,3 +134,5 @@ Email: xiangyuwang7@gmail.com
 此处感谢提供格式要求文件的马学弟，祝各位毕设顺利~
 ### 2019.04.19
 删除弃用的command(\maketitlepagestatement→\maketitlepage)， 最近比较忙没有时间改warnings，但是不耽误使用
+### 2019.05.06
+加载宏包{ccmap}，尽量减少复制文字出现乱码的可能

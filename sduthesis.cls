@@ -68,6 +68,7 @@
 \RequirePackage{booktabs}
 \RequirePackage{xcolor}
 \RequirePackage{makecell}
+\RequirePackage{ccmap}
 %% add more xelatex fonts
 \RequirePackage{xeCJK}  %%中文字体
 \setCJKfamilyfont{song}{SimSun}                                   %宋体 song
